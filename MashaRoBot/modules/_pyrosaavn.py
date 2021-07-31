@@ -31,6 +31,6 @@ async def song(client, message):
     file = wget.download(slink)
     ffile = file.replace("mp4", "m4a")
     os.rename(file, ffile)
-    await message.reply_audio(audio=ffile, title=sname, performer=ssingers)
+    await message.reply_audio(audio=ffile, title=sname, performer=ssingers),reply_text("uploaded by Ultron")
     os.remove(ffile)
     await m.delete()

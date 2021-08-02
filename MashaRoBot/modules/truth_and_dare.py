@@ -16,6 +16,14 @@ def dare(update: Update, context: CallbackContext):
     args = context.args
     update.effective_message.reply_text(random.choice(truth_and_dare_string.DARE))
     
+
+
+TRUTH_HANDLER = DisableAbleCommandHandler("truth", truth)
+DARE_HANDLER = DisableAbleCommandHandler("dare", dare)
+
+dispatcher.add_handler(TRUTH_HANDLER)
+dispatcher.add_handler(DARE_HANDLER)
+
 __help__ = """
  Here is the info about the Truth or Dare module:
  
@@ -23,11 +31,5 @@ __help__ = """
  
  • /truth: Get a question that you will have to tell truth about.
 """
-
-TRUTH_HANDLER = DisableAbleCommandHandler("truth", truth)
-DARE_HANDLER = DisableAbleCommandHandler("dare", dare)
-
-dispatcher.add_handler(TRUTH_HANDLER)
-dispatcher.add_handler(DARE_HANDLER)
 
 __mod_name__ = "Truth or Dare"

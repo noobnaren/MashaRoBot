@@ -27,9 +27,9 @@ dispatcher.add_handler(DARE_HANDLER)
 __help__ = """
  Here is the info about the Truth or Dare module:
  
- • /dare: Get a dare that you will have to do now.
+ • /dare*:* Get a dare that you will have to do now.
  
- • /truth: Get a question that you will have to tell truth about.
+ • /truth*:* Get a question that you will have to tell truth about.
 """
 
 __mod_name__ = "Truth or Dare"
